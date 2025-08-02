@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+    *{
+    margin: 0%;
+    padding: 0%;
+    }
+
+    nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(0, 0, 0);
+  height: 90px;
+  padding: 0 40px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  font-family: Poppins;
+  font-size: 22px;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: white;
+  text-decoration: none; /* Removes default underline */
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff4d4d;
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+.right {
+    
+  margin: 0;
+}
+
+.right h3 {
+    font-family: sora;
+  color: white;
+  font-size: 30px;
+}
+.right h3 span{
+    color: red;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000000;
+  color: #fff;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px;
+  flex-wrap: wrap;
+}
+
+.home-left {
+  max-width: 600px;
+}
+
+.home-left h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.home-left h1 span {
+  color: #ff4d4d;
+  display: block;
+}
+
+.home-left h3 {
+  font-size: 22px;
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.home-left p {
+  font-size: 16px;
+  margin-top: 20px;
+  color: #bbb;
+}
+
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.cv-btn {
+  background-color: #121212;
+  color: #fff;
+  border: 1px solid #333;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Floating Image Style */
+.home-right {
+  flex: 1;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.floating-image {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: white solid 5px;
+  box-shadow: 0 0 30px #ff4d4d;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.about {
+  background-color: #000000;
+  color: #fff;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 800px;
+  background-color: #0e0e0e;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+
+.about-container h2 {
+  font-family: sora;
+  padding-left: 38%;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.about-container h2 span {
+  color: rgb(225, 5, 5);
+}
+
+.about-container hr {
+  border: 0;
+  height: 1px;
+  background: #444;
+  margin-bottom: 25px;
+}
+
+.about-container p {
+  font-family: Poppins ;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.7;
+  text-align: justify;
+}
+.about-container:hover {
+    border-left: 4px solid #ff4d4d;
+    box-shadow: 0 0 15px #ff4d4d;
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      padding: 20px;
+    }
+  }
+
+.edu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  .edu-box {
+    background-color: #0e0e0e;
+    border-radius: 8px;
+    padding: 25px;
+    border-left: 4px solid transparent;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .edu-box:hover {
+    border-left: 4px solid #ff4d4d;
+    box-shadow: 0 0 15px #ff4d4d;
+  }
+
+  .edu-box h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
+  .edu-box p {
+    color: #cccccc;
+    margin: 5px 0;
+  }
+
+  .edu-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    color: #aaa;
+  }
+
+  .edu-box ul li {
+    margin-bottom: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .edu-box {
+      padding: 20px;
+    }
+  }
+  
+  .skill-tag {
+    display: inline-block;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1.5px solid #ff3366;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+  }
+
+  .skill-tag:hover {
+    background-color: #ff4d4d;
+    color: #000;
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .skill-pill {
+    display: inline-block;
+    padding: 12px 18px;
+    font-size: 14px;
+    border-radius: 10px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border: 1px solid #ff4d4d;
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px rgba(255, 0, 100, 0.1);
+  }
+
+  .skill-pill:hover {
+    border-color: red;
+    box-shadow: 0 0 15px red;
+    transform: translateY(-3px) scale(1.03);
+    background: rgb(198, 10, 10);
+    cursor: default;
+  }
+  .projects-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+
+/* Individual project card */
+.project-card {
+  background-color: #0e0e0e;
+  border-radius: 15px;
+  border: 1px solid #1f1f1f;
+  padding: 30px;
+  max-width: 420px;
+  flex: 1 1 calc(50% - 40px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+.project-card:hover {
+    border-left: 2px solid #f12e2e;
+    box-shadow: 0 0 15px #de1a1a;
+  }
+  @media (max-width: 768px) {
+    .project-card {
+      padding: 20px;
+    }
+  }
+
+.project-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+
+.project-subtitle {
+  font-size: 14px;
+  color: #b0b0b0;
+  margin-bottom: 18px;
+}
+
+.section-label {
+  color: #ff3366;
+  font-weight: bold;
+  margin: 15px 0 10px;
+  font-size: 15px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tech-badge {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  color: #e0e0e0;
+  margin: 0;
+}
+
+.feature-list li {
+  margin-bottom: 8px;
+  position: relative;
+  padding: auto;
+}
+
+.feature-list li::before {
+  content: '•';
+  color: #ff3366;
+  position: absolute;
+  left: 0;
+}
+
+.project-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.code-btn {
+  background-color: #1f1f1f;
+  border: 1px solid #ff3366;
+  color: #ff3366;
+}
+
+.code-btn:hover {
+  background-color: #ff3366;
+  color: #000;
+}
+
+.demo-btn {
+  background-color: #1f1f1f;
+  border: 1px solid #999;
+  color: #fff;
+}
+
+.demo-btn:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+/* Responsive stacking on small screens */
+@media (max-width: 768px) {
+  .project-card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Internship Section Styling */
+.section {
+  padding: 100px 60px;
+  background-color: #000000;
+}
+
+.section-heading {
+  color: rgb(255, 255, 255);
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: bold;
+}
+
+.internship-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.internship-card {
+  background-color: #1e1e1e;
+  padding: 40px;
+  border-radius: 16px;
+  width: 360px;
+  box-shadow: 0 6px 18px rgba(255, 51, 102, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-left: 4px solid transparent;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.internship-card:hover {
+    border-left: 4px solid #f12e2e;
+    box-shadow: 0 0 15px #de1a1a;
+}
+
+.internship-role {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.internship-company {
+  color: #ff3366;
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.internship-date {
+  color: #bbbbbb;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.internship-tasks {
+  color: #cccccc;
+  font-size: 15px;
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+/* Certifications Section */
+#certifications {
+  padding: 60px 20px;
+  background-color: #000000;
+}
+
+.section-title {
+  color: white;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cert-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.cert-box {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.cert-box:hover {
+  transform: translateY(-4px);
+  border-left: 2px solid #f12e2e;
+  box-shadow: 0 0 15px #de1a1a;
+  }
+@media (max-width: 768px) {
+    .cert-box {
+      padding: 20px;
+    }
+  }
+
+.cert-title {
+  color: #ffffff;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.cert-org {
+  color: #bbbbbb;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.cert-btn {
+  display: inline-block;
+  padding: 6px 12px;
+  background-color: rgb(225, 5, 5);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.cert-btn:hover {
+  background-color: rgb(227, 11, 11);
+  color: #000;
+}
+
+
+
+
+/* Base styling */
+#contact {
+  background-color: #000000;
+  padding: 100px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-wrapper {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 38px;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.contact-title span {
+  color: rgb(225, 5, 5);
+}
+
+.contact-subtext {
+  color: #ccc;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+/* Card box */
+.contact-box {
+  background-color: #121212;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+/* 2x2 grid layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Individual contact cards */
+.contact-card {
+  background-color: #1b1b1b;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  gap: 15px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  border-left: 4px solid rgb(225, 5, 5);
+  box-shadow: 0 0 15px rgb(225, 5, 5);
+  transform: translateY(-2px);
+}
+
+/* Icon box */
+.contact-icon {
+  background-color: #291313;
+  color: #ff3366;
+  padding: 12px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+/* Info text */
+.contact-info h3 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.contact-info p {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Button */
+.contact-button {
+  margin-top: 30px;
+}
+
+.contact-button button {
+  background-color: #ff3366;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(255, 51, 102, 0.4);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button button:hover {
+  background-color: rgb(225, 5, 5);
+  box-shadow: 0 0 20px rgba(255, 51, 102, 0.6);
+}
+
+.contact-button i {
+  margin-right: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Section */
+#footer {
+  background-color: #000000;
+  padding: 20px 10px;
+  text-align: center;
+  border-top: 2px solid #1f1f1f;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-name {
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  margin: 0;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-icon {
+  font-size: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ff3366;
+  transform: scale(1.2);
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+                <div class="right">
+                    <h3>Samarth <span>Mane</span></h3>
+                </div>
+                <div class="left">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#internship">Internship</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+
+
+<section class="home" id="home">
+  <div class="home-left">
+    <h1>Hi, I'm <span>Samarth Mane</span></h1>
+    <h3>Software Developer | FullStack Developer | Android Developer</h3>
+    <p>
+      Crafting innovative digital solutions with passion for growth and efficiency. Building the future, one line of code at a time. <br>
+      <b>B.E. PDA College Of Engineering, Kalaburgi</b>
+    </p>
+    <div class="home-buttons">
+      <a href="Samarth_Mane_Resume.pdf" download class="btn cv-btn">⬇️ Download Resume</a>
+    </div>
+  </div>
+  <div class="home-right">
+    <img src="Samarth_image.jpeg" alt="Samarth Mane" class="floating-image" />
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-container">
+    <h2>About <span>Me</span></h2>
+    <hr />
+    <p>
+      I'm a passionate Software Developer with a strong foundation in full-stack development, Android development.
+      Currently pursuing my B.E. in Information Science at PDA College of Engineering, Kalaburagi.
+      <br /><br />
+      With strong skills in Java, Kotlin, Python, React.js, and modern database systems, I specialize in building robust, scalable, and user-centric applications that deliver real-world impact.  
+      <br /><br />
+      I thrive on innovation and continuously seek opportunities to expand my expertise through hands-on projects, tech communities, and open-source contributions.
+
+    </p>
+  </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" style="padding: 60px 20px; background-color: #000000;">
+  <h2 style="color: rgb(225, 5, 5);; font-size: 32px; text-align: center; margin-bottom: 40px;">Education</h2>
+
+  <div class="edu-container" id="education">
+    <!-- B.E -->
+    <div class="edu-box" id=>
+      <h3>B.E. in Information Science and Engineering</h3>
+      <p><strong>PDA College of Engineering, Kalaburgi</strong></p>
+      <p>2022 – 2026 (Expected)</p>
+      <ul>
+        <li>Current CGPA: 8.6</li>
+        <li>Engaged in comprehensive coursework covering core computing areas like DSA, DBMS, OS, and Web Technologies.</li>
+        <li>Applying academic knowledge through hands-on labs, team projects, and real-world development experiences.</li>
+      </ul>
+    </div>
+
+    <!-- PUC -->
+    <div class="edu-box">
+      <h3>PUC - Intermediate</h3>
+      <p><strong>RJ PU College, Kalaburgi</strong></p>
+      <p>2020 – 2022</p>
+      <ul>
+        <li>Scored 520/600 (86.67%)</li>
+      </ul>
+    </div>
+
+    <!-- 10th -->
+    <div class="edu-box">
+      <h3>10th CBSE-Board</h3>
+      <p><strong>Shree Swaminarayan Gurukul International School, Kalaburgi</strong></p>
+      <p>2017-2020</p>
+      <ul>
+        <li>Scored  (66.20%)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="skills" style="background-color: #000; color: #fff; padding: 70px 20px;">
+  <h2 style="text-align: center; font-size: 36px; margin-bottom: 50px;">
+    Technical <span style="color: red;">Skills</span>
+  </h2>
+
+  <div class="skills-grid">
+    <span class="skill-pill">Java</span>
+    <span class="skill-pill">Kotlin</span>
+    <span class="skill-pill">Python</span>
+    <span class="skill-pill">HTML</span>
+    <span class="skill-pill">CSS</span>
+    <span class="skill-pill">JavaScript</span>
+    <span class="skill-pill">React.js</span>
+    <span class="skill-pill">Node.js</span>
+    <span class="skill-pill">Express.js</span>
+    <span class="skill-pill">MongoDB</span>
+    <span class="skill-pill">SQL</span>
+    <span class="skill-pill">Flask</span>
+    <span class="skill-pill">C/C++</span>
+    <span class="skill-pill">AI/ML</span>
+    <span class="skill-pill">Android Development</span>
+    <span class="skill-pill">Full Stack Development</span>
+    <span class="skill-pill">UI/UX Design</span>
+    <span class="skill-pill">Git & GitHub</span>
+    <span class="skill-pill">RESTful APIs</span>
+  </div>
+</section>
+
+
+
+<section class="projects-section">
+    <h2 class="section-heading">Featured <span style="color: rgb(225, 5, 5);">Projects</span></h2>
+    <div class="projects-container" id="projects">
+      
+      <!-- Project Card #1 -->
+      <div class="project-card">
+        <div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="Coffee shop.gif" alt="img" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">SWAD-GHAR-KA RESTAURANT WEBSITE</h2>
+        <p class="project-subtitle">Food Ordering and Table Booking Platform</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML</span>
+          <span class="tech-badge">CSS</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">MongoDB</span>
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li>Built a full-stack restaurant site with food menu, ordering, and delivery features.</li>
+          <li>Added table booking with real-time slot selection.</li> 
+        </ul>
+        <div class="project-buttons">
+          <a href="https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="https://swad-ghar-ka-restaurant-website-by.onrender.com/" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+
+      <!-- Duplicate this card for more projects -->
+      <div class="project-card">
+        <div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="Resume.gif" alt="img" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">AI-POWERED RESUME SCREENING AND INTERVIEW ASSISTANCE</h2>
+        <p class="project-subtitle">Final Year Major Project</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML/CSS</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">spaCy</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">NLTK</span>
+          <span class="tech-badge">docx2txt</span>
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li> Built an AI-powered Model using NLP and BERT.</li>
+          <li>Developed a Flask web app with scoring, instant feedback, and interactive UI.</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="Flight Booking.gif" alt="SWAD-GHAR-KA Project Screenshot" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">FLIGHT PRICE PREDICTOR</h2>
+        <p class="project-subtitle">DataScience-BasedPrice Optimization Tool</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">HTML/CSS</span>
+          <span class="tech-badge">JavaScript</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">Flask</span>
+          <span class="tech-badge">Scikit-learn</span>
+          <span class="tech-badge">Pandas</span>
+          <span class="tech-badge">Matplotlib</span>
+          <span class="tech-badge">NumPy</span>
+
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li>Built regression model for flight prices</li>
+          <li>Trained on airline dataset features</li>
+          <li>Developed interactive Flask-based website</li>
+          <li>Enabled dynamic price visualization interface</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card"><div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="Location search.gif" alt="img" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">GEOLOCATION TRAVEL COMPANION APP </h2>
+        <p class="project-subtitle">Location-based Android App</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">Kotlin</span>
+          <span class="tech-badge">XML</span>
+          <span class="tech-badge">Jetpack Compose</span>
+          <span class="tech-badge">Coroutines</span>
+          <span class="tech-badge">Retrofit</span>
+          <span class="tech-badge">Room</span>
+          <span class="tech-badge"> Google Maps SDK</span>
+          <span class="tech-badge">Room</span>
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li>Developed Android app using Kotlin</li>
+          <li>Tracked real-time user location map</li>
+          <li>Used MVVM architecture and Coroutines</li>
+          <li>Integrated Retrofit and Room database</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="Ecommerce web page.gif" alt="img" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">E-Commerce Web App</h2>
+        <p class="project-subtitle">Online shopping platform with cart</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Tailwind</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">MongoDB</span>
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li>User authentication</li>
+          <li>Shopping cart</li>
+          <li>Admin dashboard</li>
+          <li>Stripe payments</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image" style="text-align: center; margin-bottom: 20px;">
+    <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" alt="SWAD-GHAR-KA Project Screenshot" style="width: 100%; max-width: 450px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.2);">
+  </div>
+        <h2 class="project-title">E-Commerce Web App</h2>
+        <p class="project-subtitle">Online shopping platform with cart</p>
+        <div class="section-label">Tech Stack</div>
+        <div class="tech-stack">
+          <span class="tech-badge">React.js</span>
+          <span class="tech-badge">Tailwind</span>
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">MongoDB</span>
+        </div>
+        <div class="section-label">Key Features</div>
+        <ul class="feature-list">
+          <li>User authentication</li>
+          <li>Shopping cart</li>
+          <li>Admin dashboard</li>
+          <li>Stripe payments</li>
+        </ul>
+        <div class="project-buttons">
+          <a href=https://github.com/Samarth-Mane" class="btn code-btn "><i class="fab fa-github"></i> Code</a>
+          <a href="#" class="btn demo-btn">🔗 Demo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internship Section -->
+<section id="internship" class="section">
+  <h2 class="section-heading">Internship</h2>
+
+  <div class="internship-grid">
+    
+    <!-- Internship Card -->
+    <div class="internship-card">
+      <h3 class="internship-role">Fullstack Development Using Python</h3>
+      <p class="internship-company">Ethnotech Academy</p>
+      <p class="internship-date">SEP 2024 – DEC 2024</p>
+      <ul class="internship-tasks">
+        <li>Built console apps and full-stack web applications</li>
+        <li>Worked with Flask, React, Node.js, HTML, CSS, and Python.</li>
+        <li>Improved skills in integrating frontend and backend components effectively.</li>
+      </ul>
+    </div>
+
+    <div class="internship-grid">
+    
+    <!-- Internship Card -->
+    <div class="internship-card">
+      <h3 class="internship-role">Software Development Intern</h3>
+      <p class="internship-company">Cognizfy Technology</p>
+      <p class="internship-date">June 2025 – Present</p>
+      <ul class="internship-tasks">
+        <li>Created a Java-based Task Manager console app with full CRUD features.</li>
+        <li>Built full-stack Task Manager using Node.js, Express & MongoDB.</li>
+        <li>Worked with GitHub for version control and collaborated in Agile sprints.</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section id="certifications">
+  <h2 class="section-title">Certifications</h2>
+
+  <div class="cert-container">
+    
+    <!-- Certification 1 -->
+    <div class="cert-box">
+      <h3 class="cert-title">The Joy of Computing using Python</h3>
+      <p class="cert-org">NPTEL · Course</p>
+      <a href="The Joy of Computing using Python.pdf" class="cert-btn">View</a>
+    </div>
+
+    <!-- Certification 2 -->
+    <div class="cert-box">
+      <h3 class="cert-title">Full Stack Development</h3>
+      <p class="cert-org">Ethnotech</p>
+      <a href="FullStack Python.pdf" class="cert-btn">View</a>
+    </div>
+
+    <!-- Certification 3 -->
+    <div class="cert-box">
+      <h3 class="cert-title">Advance - C</h3>
+      <p class="cert-org">CISCO - Academy</p>
+      <a href="adcance c.pdf" class="cert-btn">View</a>
+    </div>
+
+    <div class="cert-box">
+      <h3 class="cert-title">Master Java Visually</h3>
+      <p class="cert-org">Udemy</p>
+      <a href="udemy-java.pdf" class="cert-btn">View</a>
+    </div>
+
+    <div class="cert-box">
+      <h3 class="cert-title">The Complete Android 14 And Kotlin Masterclass </h3>
+      <p class="cert-org">Udemy</p>
+      <a href="cybersecurity-deloitte...pdf" class="cert-btn">View</a>
+    </div>
+
+    <div class="cert-box">
+      <h3 class="cert-title">Java Spring Boot</h3>
+      <p class="cert-org">Udemy</p>
+      <a href="cybersecurity-deloitte...pdf" class="cert-btn">View</a>
+    </div>
+
+    <div class="cert-box">
+      <h3 class="cert-title">Deloitte - Cyber Job Simulation</h3>
+      <p class="cert-org">Deloitte</p>
+      <a href="cybersecurity-deloitte...pdf" class="cert-btn">View</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-wrapper">
+    <h2 class="contact-title">Get In <span>Touch</span></h2>
+    <p class="contact-subtext">
+      Ready to bring your ideas to life? Let's discuss your next project
+    </p>
+
+    <div class="contact-box">
+      <div class="contact-grid">
+        <!-- Email -->
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-info">
+            <h3>Email</h3>
+            <p>samarthsmane004@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+          <div class="contact-info">
+            <h3>Phone</h3>
+            <p>+91 6360928405</p>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div class="contact-info">
+            <h3>LinkedIn</h3>
+            <p>samarth-mane-930a12257</p>
+          </div>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-card">
+          <div class="contact-icon"><i class="fab fa-github"></i></div>
+          <div class="contact-info">
+            <h3>GitHub</h3>
+            <p>Samarth-Mane</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-button">
+        <a href="mailto:samarthsmane004@gmail.com">
+          <button><i class="fas fa-envelope"></i> Start a Conversation</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<footer id="footer">
+  <div class="footer-content">
+    <p class="footer-name">© 2025 Samarth Mane | All Rights Reserved</p>
+
+    <div class="footer-icons">
+      <a href="https://github.com/Samarth-Mane" class="footer-icon" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/samarth-mane-930a12257"  class="footer-icon" title="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:your@email.com" class="footer-icon">   
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
